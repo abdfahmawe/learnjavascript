@@ -1,15 +1,120 @@
-function inc() {
-  document.querySelector("p").classList.remove("remove");
-  document.querySelector("h2").classList.remove("remove");
-  document.querySelector("p").classList.add("add");
-  document.querySelector("h2").classList.add("add");
-}
-function dec() {
-  document.querySelector("p").classList.remove("add");
-  document.querySelector("h2").classList.remove("add");
-  document.querySelector("p").classList.add("remove");
-  document.querySelector("h2").classList.add("remove");
-}
-document.querySelector(".increase").onclick = inc;
+// combaiond oparetior
 
-document.querySelector(".decrement").onclick = dec;
+//  var user = undefined;
+// var sayhi = undefined;
+// var user = undefined
+//-----------------------------
+//var user = mostafa;
+// sayhi = function (){}
+
+var names = [
+  "Tariq",
+  "Ali",
+  "Rami",
+  "Sara",
+  "Huda",
+  "Lina",
+  "Ahmad",
+  "Yara",
+  "Mona",
+  "Omar",
+  "Noor",
+  "Amira",
+  "Fadi",
+  "Hassan",
+  "Aya",
+  "Khalid",
+  "Leila",
+  "Samer",
+  "Zain",
+  "Nadine",
+  "Ibrahim",
+  "Hana",
+  "Mahmoud",
+  "Nour",
+  "Rania",
+  "Salim",
+  "Rasha",
+  "Adel",
+  "Basma",
+  "Waleed",
+  "Yousef",
+  "Mariam",
+  "Samira",
+  "Issa",
+  "Farah",
+  "Bilal",
+  "Laila",
+  "Jana",
+  "Mustafa",
+  "Naji",
+  "Dina",
+  "Hatem",
+  "Maya",
+  "Tamer",
+  "Loubna",
+  "Saif",
+  "Fayez",
+  "Salma",
+  "Reem",
+  "Zahra",
+  "Yazan",
+  "Nabil",
+  "Ola",
+  "Rita",
+  "Jawad",
+  "Shadi",
+  "Kamil",
+  "Nada",
+  "Ibtisam",
+  "Basel",
+  "Ziad",
+  "Manal",
+  "Tala",
+  "Anas",
+  "Ghada",
+  "Jamil",
+  "Rabab",
+  "Sami",
+  "Rayan",
+  "Fatima",
+  "Walid",
+  "Nourhan",
+  "Karim",
+  "Maysa",
+  "Firas",
+  "Amal",
+  "Lamis",
+  "Sahar",
+  "Rafik",
+  "Iman",
+  "Mohammad",
+  "Lamar",
+  "Majed",
+  "Tania",
+  "Ayman",
+  "Shereen",
+  "Qasem",
+  "Haifa",
+  "Bassam",
+  "Nada",
+  "Alaa",
+  "Marwa",
+  "Sameh",
+  "Noura",
+  "Murad",
+  "Afaf",
+  "Nizar",
+  "Rida",
+  "Aziz",
+  "Dalia",
+];
+
+for (var i = 0; i < names.length; i++) {
+  let mytr = document.createElement("tr");
+  let mytd = document.createElement("td");
+  let mytext = names[i];
+  mytd.innerHTML = mytext;
+  mytr.appendChild(mytd);
+  document.querySelector("tbody").appendChild(mytr);
+}
