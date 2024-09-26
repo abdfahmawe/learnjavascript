@@ -1,120 +1,30 @@
-// combaiond oparetior
+var product = [];
+var names = document.querySelector("#name");
+var description = document.querySelector("#description");
+var price = document.querySelector("#price");
 
-//  var user = undefined;
-// var sayhi = undefined;
-// var user = undefined
-//-----------------------------
-//var user = mostafa;
-// sayhi = function (){}
+document.querySelector(".register").onsubmit = function (e) {
+  e.preventDefault();
+  var user = {
+    nameProduct: names.value,
+    namePrice: price.value,
+    namedescription: description.value,
+  };
+  product.push(user);
+  console.log(product);
+  printData();
+};
 
-var names = [
-  "Tariq",
-  "Ali",
-  "Rami",
-  "Sara",
-  "Huda",
-  "Lina",
-  "Ahmad",
-  "Yara",
-  "Mona",
-  "Omar",
-  "Noor",
-  "Amira",
-  "Fadi",
-  "Hassan",
-  "Aya",
-  "Khalid",
-  "Leila",
-  "Samer",
-  "Zain",
-  "Nadine",
-  "Ibrahim",
-  "Hana",
-  "Mahmoud",
-  "Nour",
-  "Rania",
-  "Salim",
-  "Rasha",
-  "Adel",
-  "Basma",
-  "Waleed",
-  "Yousef",
-  "Mariam",
-  "Samira",
-  "Issa",
-  "Farah",
-  "Bilal",
-  "Laila",
-  "Jana",
-  "Mustafa",
-  "Naji",
-  "Dina",
-  "Hatem",
-  "Maya",
-  "Tamer",
-  "Loubna",
-  "Saif",
-  "Fayez",
-  "Salma",
-  "Reem",
-  "Zahra",
-  "Yazan",
-  "Nabil",
-  "Ola",
-  "Rita",
-  "Jawad",
-  "Shadi",
-  "Kamil",
-  "Nada",
-  "Ibtisam",
-  "Basel",
-  "Ziad",
-  "Manal",
-  "Tala",
-  "Anas",
-  "Ghada",
-  "Jamil",
-  "Rabab",
-  "Sami",
-  "Rayan",
-  "Fatima",
-  "Walid",
-  "Nourhan",
-  "Karim",
-  "Maysa",
-  "Firas",
-  "Amal",
-  "Lamis",
-  "Sahar",
-  "Rafik",
-  "Iman",
-  "Mohammad",
-  "Lamar",
-  "Majed",
-  "Tania",
-  "Ayman",
-  "Shereen",
-  "Qasem",
-  "Haifa",
-  "Bassam",
-  "Nada",
-  "Alaa",
-  "Marwa",
-  "Sameh",
-  "Noura",
-  "Murad",
-  "Afaf",
-  "Nizar",
-  "Rida",
-  "Aziz",
-  "Dalia",
-];
-
-for (var i = 0; i < names.length; i++) {
-  let mytr = document.createElement("tr");
-  let mytd = document.createElement("td");
-  let mytext = names[i];
-  mytd.innerHTML = mytext;
-  mytr.appendChild(mytd);
-  document.querySelector("tbody").appendChild(mytr);
+function printData() {
+  let data = ``;
+  for (let i = 0; i < product.length; i++) {
+    data += `
+    <tr>
+    <td>${product[i].nameProduct}</td>
+    <td>${product[i].namedescription}</td>
+    <td>${product[i].namePrice}</td>
+    </tr>
+    `;
+    document.querySelector("tbody").innerHTML = data;
+  }
 }
